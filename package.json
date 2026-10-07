@@ -1,0 +1,21 @@
+{
+  "name": "tcp-reno-replay",
+  "version": "1.0.0",
+  "description": "教学用 TCP Reno 拥塞窗口与快速恢复事件回放后端（API + CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "npm run build && node --experimental-sqlite --test test/*.test.ts",
+    "start": "node --experimental-sqlite dist/src/server.js",
+    "demo": "node --experimental-sqlite dist/src/cli.js demo",
+    "cli": "node --experimental-sqlite dist/src/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.3"
+  }
+}
